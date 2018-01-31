@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+
+    title SB Admin - Start Bootstrap Template
+
+    include includes/css/core.pug
+
+    include includes/css/custom.pug
+
+  body.bg-dark
+    .container
+      .card.card-register.mx-auto.mt-5
+        .card-header
+          | Register an Account
+        .card-body
+          form(action='/signup', method='post')
+            .form-group
+              .form-row
+                .col-md-6
+                  label(for='txtFirstName') First name
+                  input#txtFirstName.form-control(type='text', name='first_name', aria-describedby='nameHelp', placeholder='Enter first name')
+                .col-md-6
+                  label(for='txtLastName') Last name
+                  input#txtLastName.form-control(type='text', name='last_name' aria-describedby='nameHelp', placeholder='Enter last name')
+            .form-group
+              label(for='txtEmail') Email address
+              input#txtEmail.form-control(type='email', name='email', aria-describedby='emailHelp', placeholder='Enter email')
+            .form-group
+              .form-row
+                .col-md-6
+                  label(for='txtPassword') Password
+                  input#txtPassword.form-control(type='password', name='password', placeholder='Password')
+                .col-md-6
+                  label(for='txtCfmPassword') Confirm password
+                  input#txtCfmPassword.form-control(type='password', name='confirmPassword', placeholder='Confirm password')
+            input.btn.btn-primary.btn-block(type= 'submit' value='login')
+          .text-center
+            a.d-block.small.mt-3(href='/login') Login Page
+            a.d-block.small(href='/forgot-password') Forgot Password?
+
+    include includes/js/core.pug

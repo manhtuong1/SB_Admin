@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+
+    title SB Admin - Start Bootstrap Template
+
+    include includes/css/core.pug
+
+    include includes/css/custom.pug
+
+  body.bg-dark
+    .container
+      .card.card-login.mx-auto.mt-5
+        .card-header
+          | Login
+        .card-body
+          form#signin(role='form', name='signin', method='post', action='/signin')
+            .form-group
+              label(for='email1') Email address
+              input#email1.form-control(type='email', name='email', aria-describedby='emailHelp', placeholder='Enter email')
+            .form-group
+              label(for='password1') Password
+              input#password1.form-control(type='password', name='password', placeholder='Password')
+            .form-group
+              .form-check
+                label.form-check-label
+                  input.form-check-input(type='checkbox')
+                  |                   Remember Password
+            input.btn.btn-primary.btn-block(type='submit' value='Login') 
+          .text-center
+            a.d-block.small.mt-3(href='/signup') Register an Account
+            a.d-block.small(href='/forgot-password') Forgot Password?
+
+    include includes/js/core.pug
